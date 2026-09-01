@@ -5,7 +5,6 @@ import { AuthCallbackPage } from './pages/AuthCallbackPage'
 import { CreatePackPage } from './pages/CreatePackPage'
 import { LoginPage } from './pages/LoginPage'
 import { MainMenuPage } from './pages/MainMenuPage'
-import { PlayPage } from './pages/PlayPage'
 import { ProfileEditPage } from './pages/ProfileEditPage'
 import { StagesPage } from './pages/StagesPage'
 
@@ -51,22 +50,6 @@ function App() {
           element={
             <RequireAuth>
               <ProfileEditPage />
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="/play"
-          element={
-            <RequireAuth>
-              <PlayPage />
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="/play/:id"
-          element={
-            <RequireAuth>
-              <PlayPage />
             </RequireAuth>
           }
         />

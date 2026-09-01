@@ -529,3 +529,40 @@ body {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: var(--charcoal);
+  border-radius: 20px;
+  padding: 2.5rem 2.5rem 2rem;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  border: 1px solid #444;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #fff;
+}
