@@ -46,31 +46,31 @@ export function AuthCallbackPage() {
 
       <CatMascot />
 
-      <div className="panel" style={{ textAlign: 'center', padding: '2rem 2.5rem', minWidth: 300, maxWidth: 380 }}>
+      <div className="panel" style={{ textAlign: 'center', padding: '2.5rem 3.5rem', minWidth: 420, maxWidth: 520 }}>
         {status === 'loading' && (
           <>
-            <div className="spinner" />
-            <p style={{ color: '#fff', marginTop: '1.2rem', fontSize: '1rem', fontWeight: 700 }}>로그인 확인 중...</p>
+            <div className="spinner" style={{ width: 64, height: 64, borderWidth: 6 }} />
+            <p style={{ color: '#fff', marginTop: '1.5rem', fontSize: '1.4rem', fontWeight: 700 }}>로그인 확인 중...</p>
           </>
         )}
 
         {status === 'success' && (
           <>
-            <p style={{ color: '#aaa', fontSize: '1rem', marginBottom: '0.5rem' }}>로그인 성공! 아래 코드를</p>
-            <p style={{ color: '#fff', fontWeight: 700, fontSize: '1.2rem', marginBottom: '1.2rem' }}>게임 앱에 입력하세요</p>
+            <p style={{ color: '#aaa', fontSize: '1.3rem', marginBottom: '0.6rem' }}>로그인 성공! 아래 코드를</p>
+            <p style={{ color: '#fff', fontWeight: 700, fontSize: '1.6rem', marginBottom: '1.5rem' }}>게임 앱에 입력하세요</p>
 
             <div style={{
               background: '#1a1a1a',
               border: '2px solid var(--mint)',
               borderRadius: 12,
-              padding: '1rem 1.5rem',
-              marginBottom: '1.2rem',
+              padding: '1.2rem 2rem',
+              marginBottom: '1.4rem',
             }}>
               <span style={{
                 color: 'var(--mint)',
-                fontSize: '2rem',
+                fontSize: '2.8rem',
                 fontWeight: 900,
-                letterSpacing: 6,
+                letterSpacing: 8,
                 fontFamily: 'monospace',
               }}>
                 {loginCode}
@@ -80,12 +80,12 @@ export function AuthCallbackPage() {
             <button
               className="btn btn-green"
               onClick={handleCopy}
-              style={{ width: '100%', fontSize: '1rem', padding: '0.75rem' }}
+              style={{ width: '100%', fontSize: '1.2rem', padding: '0.9rem' }}
             >
               {copied ? '✓ 복사됨!' : '복사하기'}
             </button>
 
-            <p style={{ color: '#aaa', fontSize: '0.95rem', marginTop: '1rem' }}>
+            <p style={{ color: '#aaa', fontSize: '1.05rem', marginTop: '1.2rem' }}>
               코드는 일회용이에요. 게임에 입력하면 자동으로 로그인돼요.
             </p>
           </>
@@ -93,12 +93,12 @@ export function AuthCallbackPage() {
 
         {status === 'error' && (
           <>
-            <p style={{ color: '#ff6b6b', fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>
+            <p style={{ color: '#ff6b6b', fontSize: '1.4rem', fontWeight: 700, marginBottom: '1.2rem' }}>
               ⚠️ {errorMsg}
             </p>
             <button
               className="btn btn-green"
-              style={{ width: '100%' }}
+              style={{ width: '100%', fontSize: '1.1rem', padding: '0.85rem' }}
               onClick={() => window.location.href = '/login'}
             >
               다시 로그인
