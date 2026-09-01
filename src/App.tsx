@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { getLoginCode } from './api'
+import { AuthCallbackPage } from './pages/AuthCallbackPage'
 import { CreatePackPage } from './pages/CreatePackPage'
 import { LoginPage } from './pages/LoginPage'
 import { MainMenuPage } from './pages/MainMenuPage'
@@ -20,6 +21,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/auth/callback" element={<AuthCallbackPage />} />
         <Route
           path="/"
           element={
