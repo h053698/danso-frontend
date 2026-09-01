@@ -56,8 +56,8 @@ export function AuthCallbackPage() {
 
         {status === 'success' && (
           <>
-            <p style={{ color: '#aaa', fontSize: '0.85rem', marginBottom: '0.5rem' }}>로그인 성공! 아래 코드를</p>
-            <p style={{ color: '#fff', fontWeight: 700, fontSize: '0.95rem', marginBottom: '1.2rem' }}>게임 앱에 입력하세요</p>
+            <p style={{ color: '#aaa', fontSize: '1rem', marginBottom: '0.5rem' }}>로그인 성공! 아래 코드를</p>
+            <p style={{ color: '#fff', fontWeight: 700, fontSize: '1.2rem', marginBottom: '1.2rem' }}>게임 앱에 입력하세요</p>
 
             <div style={{
               background: '#1a1a1a',
@@ -85,7 +85,7 @@ export function AuthCallbackPage() {
               {copied ? '✓ 복사됨!' : '복사하기'}
             </button>
 
-            <p style={{ color: '#666', fontSize: '0.78rem', marginTop: '1rem' }}>
+            <p style={{ color: '#aaa', fontSize: '0.95rem', marginTop: '1rem' }}>
               코드는 일회용이에요. 게임에 입력하면 자동으로 로그인돼요.
             </p>
           </>
