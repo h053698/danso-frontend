@@ -12,6 +12,7 @@ export function AuthCallbackPage() {
 
   useEffect(() => {
     const code = searchParams.get('login_code')
+    const next = searchParams.get('next')
     if (!code) {
       setStatus('error')
       setErrorMsg('로그인 코드가 없습니다.')
@@ -21,14 +22,18 @@ export function AuthCallbackPage() {
     setLoginCode(code)
     getMe()
       .then(() => {
-        setCode(code)
-        setStatus('success')
+        if (next) {
+          navigate(next, { replace: true })
+        } else {
+          setCode(code)
+          setStatus('success')
+        }
       })
       .catch(() => {
         setStatus('error')
         setErrorMsg('유효하지 않은 로그인 코드입니다.')
       })
-  }, [searchParams])
+  }, [searchParams, navigate])
 
   const handleCopy = () => {
     navigator.clipboard.writeText(loginCode).then(() => {
