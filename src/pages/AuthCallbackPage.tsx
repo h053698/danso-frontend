@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { getMe, setLoginCode } from '../api'
 import { CatMascot } from '../CatMascot'
 
 export function AuthCallbackPage() {
   const [searchParams] = useSearchParams()
+  const navigate = useNavigate()
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading')
   const [loginCode, setCode] = useState('')
   const [copied, setCopied] = useState(false)
